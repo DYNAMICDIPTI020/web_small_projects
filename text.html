@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Hug Burger Ad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .left {
+            width: 50%;
+            background: #FFC72C;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: #9b2c2c;
+        }
+
+        .left h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .left p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d12c2c;
+        }
+
+        .right {
+            width: 50%;
+            background: #19A5C7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .burger {
+            max-width: 80%;
+            height: auto;
+            position: relative;
+        }
+
+        .tagline {
+            position: absolute;
+            bottom: 17%;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .big-text {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .hug-text {
+            position: absolute;
+            top: 16%;
+            left: 10%;
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 5px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6600;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+.cart img {
+    width: 20px;
+    margin-right: 5px;
+}
+.red{
+    width: 90px;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="burger 1.png" class="red" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#cart" class="cart">
+                <img src="logo.png" alt="Cart"> Cart</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="left">
+            <h1>Now Serving</h1>
+            <p>Two Good<br>Two Be True</p>
+        </div>
+        <div class="right">
+
+            <div class="big-text">The Big</div>
+            <div class="hug-text">hug burger</div>
+            <img src="burger1.png" alt="Big Hug Burger" class="burger">
+            <div class="tagline">Two yummy patties squeezed together in one tight hug.</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
