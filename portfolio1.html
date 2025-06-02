@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>John Doe</h1>
+        <p>Software Engineer</p>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <h3>Software Engineer, ABC Company</h3>
+                    <p>January 2020 - Present</p>
+                    <ul>
+                        <li>Developed and maintained multiple software applications</li>
+                        <li>Collaborated with cross-functional teams to deliver projects on time</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Junior Developer, DEF Company</h3>
+                    <p>June 2018 - December 2019</p>
+                    <ul>
+                        <li>Assisted in the development of new features for existing software</li>
+                        <li>Participated in code reviews and ensured high-quality code</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <h3>Bachelor of Science in Computer Science, XYZ University</h3>
+                    <p>2015 - 2019</p>
+                </li>
+            </ul>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming languages: JavaScript, HTML/CSS, Python</li>
+                <li>Development frameworks: React, Angular, Vue.js</li>
+                <li>Databases: MySQL, MongoDB, PostgreSQL</li>
+            </ul>
+        </section>
+    </main>
+    <script>// Add event listener to each section to toggle visibility on click
+document.querySelectorAll('section').forEach(section => {
+    section.addEventListener('click', () => {
+        section.classList.toggle('visible');
+    });
+});</script>
+</body>
+</html>
+   
