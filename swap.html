@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap It - Swap Platform</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:blue;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+#item-form, #item-list {
+    background:chartreuse;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow:brown;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+footer{
+    text-shadow: #45a049;
+}
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Swap It</h1>
+        <p>welcome to my platform!</p>
+    </header>
+
+    <main>
+        <section id="item-form">
+            <h2>List an Item for Swap</h2>
+            <form id="swap-form">
+                <input type="text" id="item-name" placeholder="Item Name" required>
+                <input type="text" id="item-description" placeholder="Item Description" required>
+                <button type="submit">List Item</button>
+            </form>
+        </section>
+
+        <section id="item-list">
+            <h2>Items Available for Swap</h2>
+            <ul id="items"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 diptiranjan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('swap-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const itemName = document.getElementById('item-name').value;
+    const itemDescription = document.getElementById('item-description').value;
+
+    const itemList = document.getElementById('items');
+    const listItem = document.createElement('li');
+    listItem.textContent = `${itemName}: ${itemDescription}`;
+    
+    itemList.appendChild(listItem);
+
+    // Clear the form
+    document.getElementById('swap-form').reset();
+});
+    </script>
+</body>
+</html>
