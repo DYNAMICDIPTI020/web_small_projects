@@ -1,72 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .box {
-            height: 133px;
-            width: 80vw;
-            margin: 2px;
-            padding: 2px;
-            border: 2px solid black;
-        }
-
-        .box1 {
-            background-color: aqua;
-            /* position: sticky;
-            top: 0px;
-            height: 111px;
-            width: 100%;
-            margin: 0;
-            padding: 0; */
-            position: relative;
-        top: 0px;
-            position: absolute;
-            top: 0px;  
-        }
-
-        .box2 {
-            background-color: brown;
-            /* position: relative;
-            top: -90px; */
-        }
-
-        .box3 {
-            background-color: darkcyan;
-            /* position: fixed;
-            bottom: 0px;
-            left: 5vw;
-            height: 111px; */
-        }
-
-        .box4 {
-            background-color: crimson;
-        }
-
-        .parent {
-            padding: 3px;
-            margin: 354px;
-            border: solid 2px black;
-            position: absolute;
-        }
-    </style>
+    <title>Swap It - Swap Platform</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="parent">
-        <div class=" box box1"></div>
-        <div class=" box box2"></div>
-        <div class=" box box3"></div>
-        <div class=" box box4"></div>
-    </div>
-</body>
+    <header>
+        <h1>Swap It</h1>
+        <p>welcome to my platform!</p>
+    </header>
 
+    <main>
+        <section id="item-form">
+            <h2>List an Item for Swap</h2>
+            <form id="swap-form">
+                <input type="text" id="item-name" placeholder="Item Name" required>
+                <input type="text" id="item-description" placeholder="Item Description" required>
+                <button type="submit">List Item</button>
+            </form>
+        </section>
+
+        <section id="item-list">
+            <h2>Items Available for Swap</h2>
+            <ul id="items"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 diptiranjan. All rights reserved.</p>
+    </footer>
+
+    <script src="fun.js"></script>
+</body>
 </html>
