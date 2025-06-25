@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: lightpink;
+        }
+        .container {
+            background-color: lightpink;
+            display: flex;
+            flex-direction: row;
+        }
+        h4 {
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            text-decoration: underline;
+            text-shadow: 70px;
+        }
+        .box2 {
+            align-items: center;
+            align-content: center;
+            padding-left: 335px;
+        }
+        .box1 img {
+            height: 495px;
+        }
+    </style>
+</head>
+<body>
+    <h4>pov: my crush is very beautiful😍😭</h4>
+    <div class="container">
+        <div class="box1"><img src="test.gif" alt=""></div>
+        <div class="box2"><img src="test3.gif" alt=""></div>
+    </div>
+    <audio id="myAudio" src="videoplayback.mp4" type="audio/mp4" autoplay></audio>
+
+
+    
+       <script>
+    window.onload = function() {
+        var audio = document.getElementById("myAudio");
+        // Create a play button
+        var playButton = document.createElement('button');
+        playButton.textContent = 'Play Audio';
+        playButton.onclick = function() {
+            audio.play();
+        };
+        document.body.appendChild(playButton);
+    }
+</script>
+
+    
+</body>
+</html>
