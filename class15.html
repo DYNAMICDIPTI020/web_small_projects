@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    arr = ["Aju", "Raju"
+        ,"Biju", "Ananta",
+        "Bikas", "Cartion",
+        "David", "Rus"
+    ]
+    let A = [], B = [], C = [], D = [], R = [];
+    for( student of arr){
+        document.write(student)
+        switch(student[0])
+            {
+                case "A":
+                    A.push(student);
+                    break;
+                case "B":
+                    B.push(student);
+                    break;
+                case "C":
+                    C.push(student);
+                    break;
+                case "D":
+                    D.push(student);
+                    break;
+                case "R":
+                    R.push(student);
+                    break;    
+            }
+            console.log(A,B,C,D,R)
+    }
+
+
+    let aNames = arr.filter(name => name.startsWith("A"));
+    console.log(aNames);
+    document.write("The names start with A is :  "   + aNames + "<br>")
+    let bnames = arr.filter(name => name.startsWith("B"));
+    console.log(bnames);
+    document.write("The name start with B is :  "   +bnames + "<br>")
+    let cnames = arr.filter(name => name.startsWith("C"));
+    console.log(cnames);
+    document.write("The name start with C is :  "+  cnames + "<br>")
+    let danmes = arr.filter(name => name.startsWith("D"));
+    console.log(danmes);
+    document.write("The name start with D is :  "+  danmes + "<br>")
+    let rnames = arr.filter(name => name.startsWith("R"));
+    console.log(rnames);
+    document.write("The name start with R is :  "+  rnames + "<br>")
+</script>
+</html>
