@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 40px;
+        }
+        .student-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
+            padding: 24px;
+            max-width: 350px;
+        }
+        .student-card h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .student-info {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .student-info li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<div id="students"></div>
+<script>
+    class student{
+        name = null;
+        roll = null;
+        age = null;
+        contact = null;
+        batch = null;
+        blood_group = null;
+        dob = null;
+    }
+
+    function createStudentCard(obj) {
+        const card = document.createElement('div');
+        card.className = 'student-card';
+        card.innerHTML = `
+            <h2>${obj.name.replace(/^Name:|^name:/i, '')}</h2>
+            <ul class="student-info">
+                <li>${obj.roll}</li>
+                <li>Age: ${obj.age}</li>
+                <li>Contact: ${obj.contact}</li>
+                <li>Batch: ${obj.batch}</li>
+                <li>Blood Group: ${obj.blood_group}</li>
+                <li>DOB: ${obj.dob}</li>
+            </ul>
+        `;
+        return card;
+    }
+
+    const students = [];
+
+    let itm = new student();
+    itm.name = "name:"+"chakara";
+    itm.roll = "Roll:"+1;
+    itm.age = 21;
+    itm.contact = 2382984283;
+    itm.batch = "24-27";
+    itm.blood_group = "A+";
+    itm.dob = "02/05/2006";
+    students.push(itm);
+
+    itm = new student();
+    itm.name = "Name:"+"sunakr";
+    itm.roll = "Roll:"+2;
+    itm.age = 23;
+    itm.contact = 23829843;
+    itm.batch = "24-27";
+    itm.blood_group = "A+";
+    itm.dob = "02/05/2005";
+    students.push(itm);
+
+    let bca = new student();
+    bca.name ="Name:"+"dibakar";
+    bca.roll = "Roll:"+24;
+    bca.age = 21;
+    bca.contact = 567555464;
+    bca.batch = "23-26";
+    bca.blood_group = "B+";
+    bca.dob = "03/07/2001";
+    students.push(bca);
+
+    bca = new student();
+    bca.name = "Name:"+"Anabara";
+    bca.roll = "Roll:"+25;
+    bca.age = 21;
+    bca.contact = 5675464;
+    bca.batch = "23-26";
+    bca.blood_group = "O";
+    bca.dob = "03/07/2000";
+    students.push(bca);
+
+    const container = document.getElementById('students');
+    students.forEach(stu => {
+        container.appendChild(createStudentCard(stu));
+    });
+</script>    
+</body>
+</html>
