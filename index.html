@@ -1,58 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<!-- Touch sound audio -->
-<audio id="touchSound" src="kanha.mp3" preload="auto"></audio>
-<audio id="tap" src="tap.mp3" preload="auto"></audio>
-
-<script>
-function playSound() {
-  var audio = document.getElementById('touchSound');
-  audio.currentTime = 0;
-  audio.play();
-}
-function tap() {
-  var audio = document.getElementById('tap');
-  audio.currentTime = 0;
-  audio.play();
-}
-</script>
-
-<div id="calcContainer">
-  <form name="calculator">
-    <div class="result-clear">
-      <input type="text" class="result" name="answer" readonly />
-      <input type="button" class="clear" value=" AC " onclick="playSound(); calculator.answer.value = ''" />
-    </div>
-    <div class="grid-buttons">
-      <input type="button" value="9" onclick="tap(); calculator.answer.value += '9'" />
-      <input type="button" value="8" onclick="tap(); calculator.answer.value += '8'" />
-      <input type="button" value="7" onclick="tap(); calculator.answer.value += '7'" />
-      <input type="button" value="+" onclick="playSound(); calculator.answer.value += '+'" class="math" />
-      <br />
-      <input type="button" value="4" onclick="tap(); calculator.answer.value += '4'" />
-      <input type="button" value="5" onclick="tap(); calculator.answer.value += '5'" />
-      <input type="button" value="6" onclick="tap(); calculator.answer.value += '6'" />
-      <input type="button" value="&minus;" onclick="playSound(); calculator.answer.value += '-'" class="math" />
-      <br />
-      <input type="button" value="1" onclick="tap(); calculator.answer.value += '1'" />
-      <input type="button" value="2" onclick="tap(); calculator.answer.value += '2'" />
-      <input type="button" value="3" onclick="tap(); calculator.answer.value += '3'" />
-      <input type="button" value="&#247;" onclick="playSound(); calculator.answer.value += '/'" class="math" />
-      <br />
-      <input type="button" value="." onclick="playSound(); calculator.answer.value += '.'" />
-      <input type="button" value="0" onclick="tap(); calculator.answer.value += '0'" />
-      <input type="button" value="=" onclick="playSound(); calculator.answer.value = eval(calculator.answer.value)" />
-      <input type="button" value="&#215;" onclick="playSound(); calculator.answer.value += '*'" class="math" />
-    </div>
-  </form>
-</div>
+    <img src="assets/img/linux.png" alt="">
 </body>
 </html>
