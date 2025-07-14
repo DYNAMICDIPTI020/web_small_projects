@@ -1,0 +1,51 @@
+<script>
+    class Student{
+        roll = null; age = null;
+        name = null; blood_group = null;
+        dob = null;  batch = null;
+        contact = null; branch = "ITM";
+        constructor(roll,age,name,blood_group,dob,batch,contact,branch){
+            this.roll = roll;
+            this.age = age;
+            this.name = name;
+            this.blood_group = blood_group;
+            this.dob = dob;
+            this.batch = batch;
+            this.contact= contact;
+            this.branch = branch;
+        }
+    }
+    student1 = new Student(101, 20, "Raju", "B+", "2003-05-15", "A1", "423786538", "ITM");
+    student2 = new Student(102, 21, "Aju", "O", "2003-05-15", "A1", "12243870", "ITM");
+    student3 = new Student(103, 20, "Kaju", "O+", "2003-05-15", "A1", "123890", "ITM");
+    student4 = new Student(104, 21, "Baju", "A+", "2003-05-15", "A1", "12337890", "ITM");
+    student5 = new Student(105, 20, "Kju", "B", "2003-05-15", "A1", "1231347890", "ITM");
+    let students = [student1, student2, student3, student4, student5];
+    
+for(x in student1){
+    document.write(x + ": " + student1[x] + "<br>");
+}
+    document.write("<br>");
+
+for(x in student2){
+    document.write(x + ": " + student2[x] + "<br>");
+}
+    document.write("<br>");
+
+for(x in student3){
+    document.write(x + ": " + student3[x] + "<br>")
+}
+    document.write("<br>");
+
+for(x in student4){
+    document.write(x + ": " + student4[x] + "<br>")
+}
+    document.write("<br>");
+
+for(x in student5){
+    document.write(x + ": " + student5[x] + "<br>")
+}
+    document.write("<br>");
+
+
+</script>
