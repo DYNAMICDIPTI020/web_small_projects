@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 1000px;
+        }
+        .gallery-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+        .caption {
+            padding: 10px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Page Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1015/220/140" alt="Gallery Image 1">
+            <div class="caption">Image 1</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1025/220/140" alt="Gallery Image 2">
+            <div class="caption">Image 2</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1035/220/140" alt="Gallery Image 3">
+            <div class="caption">Image 3</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://picsum.photos/id/1045/220/140" alt="Gallery Image 4">
+            <div class="caption">Image 4</div>
+        </div>
+    </div>
+</body>
+</html>
