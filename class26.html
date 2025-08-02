@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter your name"><br>
+    <input type="text" id="contact" placeholder="Enter your contact number">
+    <button onclick="add()">ADD</button>
+    
+</body>
+<script>
+    let name = document.getElementById('name');
+    let contact = document.getElementById('contact');
+    let contactBook = ["pani-2399289824"];
+
+    let add = function(){
+        contactBook.push(name.value + "-" + contact.value);
+        for(contact of contactBook){
+            console.log(contact);
+        }
+    }
+</script>
+</html>
