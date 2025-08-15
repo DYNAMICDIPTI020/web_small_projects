@@ -1,0 +1,26 @@
+<script type="text/javascript">
+	class Student{
+		constructor(s1,name,roll,age){
+		this.s1 = s1;
+		this.name = name;
+		this .roll = roll;
+		this.age = age;
+		}
+	}
+	s1 = new Student(1,'Raju',10,19);
+	s2 = new Student(2,'Kaju',20,20);
+	s3 = new Student(3,'Aju',30,21);
+	s4 = new Student(4,'Biju',40,22);
+	s5 = new Student(5,'Siju',50,23);
+	Students = [s1,s2,s3,s4,s5];
+	console.log(Student);
+	document.write("<table border='1'>");
+	for(student of Students){
+		document.write("<tr>");
+		for(prop in student){
+			document.write('<td>',student[prop],'</td>');
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>")
+</script>
