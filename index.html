@@ -1,11 +1,244 @@
+	<style>
+	@media (max-width: 600px) {
+		.container {
+			max-width: 98vw;
+			margin: 18px 1vw;
+			padding: 18px 6vw 18px 6vw;
+			border-radius: 14px;
+		}
+		h2 {
+			font-size: 1.3em;
+			margin-bottom: 18px;
+		}
+		label {
+			font-size: 1em;
+		}
+		input, select {
+			font-size: 1em;
+			padding: 10px 10px;
+			margin-bottom: 12px;
+			border-radius: 8px;
+		}
+		button {
+			font-size: 1em;
+			padding: 12px;
+			border-radius: 8px;
+			margin-top: 12px;
+		}
+		.qr-section img {
+			width: 120px;
+			height: 120px;
+			border-radius: 8px;
+		}
+	}
+	</style>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Join Tournament</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+		body {
+			font-family: 'Orbitron', Arial, sans-serif;
+	background: url('img/second.jpg') no-repeat center center fixed;
+		background-size: cover;
+		color: #fff;
+		margin: 0;
+		padding: 0;
+		min-height: 100vh;
+		position: relative;
+		}
+		.container {
+			max-width: 420px;
+			margin: 48px auto;
+			background: rgba(30, 34, 54, 0.55);
+			padding: 36px 28px 28px 28px;
+			border-radius: 24px;
+			box-shadow: 0 8px 48px 0 #000a, 0 0 0 4px #fff2, 0 0 32px 4px #00f0ff44;
+			border: 2.5px solid #fff5;
+			position: relative;
+			z-index: 2;
+			backdrop-filter: blur(16px) saturate(160%);
+			-webkit-backdrop-filter: blur(16px) saturate(160%);
+			overflow: hidden;
+		}
+		h2 {
+			text-align: center;
+			margin-bottom: 28px;
+			font-size: 2.2em;
+			letter-spacing: 2px;
+			color: #fff;
+			text-shadow: 0 2px 24px #000a, 0 0 8px #00f0ffcc;
+			font-weight: 900;
+		}
+		label {
+			display: block;
+			margin: 18px 0 7px;
+			font-size: 1.08em;
+			letter-spacing: 1px;
+			color: #fff;
+			text-shadow: 0 0 4px #00f0ff44;
+		}
+		input, select {
+			width: 100%;
+			padding: 12px 18px;
+			border-radius: 12px;
+			border: 1.5px solid #fff3;
+			margin-bottom: 18px;
+			background: rgba(35, 40, 58, 0.85);
+			color: #fff;
+			font-size: 1.08em;
+			box-shadow: 0 0 12px #00f0ff22 inset;
+			outline: none;
+			transition: box-shadow 0.2s, padding 0.2s, border 0.2s;
+			box-sizing: border-box;
+			backdrop-filter: blur(2px);
+		}
+		input:focus, select:focus {
+			box-shadow: 0 0 16px #00f0ff99;
+			padding: 12px 22px;
+			border: 1.5px solid #00f0ff;
+			background: rgba(35, 40, 58, 0.95);
+		}
+		button {
+			width: 100%;
+			padding: 14px;
+			background: linear-gradient(90deg, #00f0ff 0%, #4f8cff 100%);
+			color: #181c24;
+			border: none;
+			border-radius: 12px;
+			font-size: 1.2em;
+			font-family: 'Orbitron', Arial, sans-serif;
+			font-weight: bold;
+			cursor: pointer;
+			margin-top: 18px;
+			box-shadow: 0 0 24px #00f0ff88, 0 2px 12px #000a;
+			letter-spacing: 1px;
+			transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+			border: 1.5px solid #fff3;
+		}
+		button:hover {
+			background: linear-gradient(90deg, #4f8cff 0%, #00f0ff 100%);
+			color: #fff;
+			box-shadow: 0 0 32px #00f0ffcc, 0 2px 16px #000c;
+			border: 1.5px solid #00f0ff;
+		}
+		.qr-section {
+			text-align: center;
+			margin: 28px 0 18px 0;
+		}
+		.qr-section img {
+			width: 190px;
+			height: 190px;
+			border-radius: 12px;
+			background: #fff;
+			box-shadow: 0 0 24px #00f0ff55;
+			border: 2px solid #00f0ff;
+		}
+		.upload-section {
+			margin: 28px 0;
+		}
+		.success {
+			color: #4caf50;
+			text-align: center;
+			margin-top: 18px;
+			font-size: 1.1em;
+			text-shadow: 0 0 8px #4caf50aa;
+		}
+		.error {
+			color: #ff5252;
+			text-align: center;
+			margin-top: 18px;
+			font-size: 1.1em;
+			text-shadow: 0 0 8px #ff5252aa;
+		}
+		/* Add a subtle animated glow */
+		.container:before {
+			content: '';
+			position: absolute;
+			top: -10px; left: -10px; right: -10px; bottom: -10px;
+			border-radius: 32px;
+			z-index: -1;
+			background: linear-gradient(120deg, #00f0ff44 0%, #4f8cff22 100%);
+			filter: blur(18px);
+			animation: glow 3s ease-in-out infinite alternate;
+		}
+		@keyframes glow {
+			0% { opacity: 0.7; }
+			100% { opacity: 1; }
+		}
+	</style>
 </head>
 <body>
-    
+	<div class="container" id="step1">
+		<h2>Join Tournament</h2>
+		<form id="infoForm">
+			<label for="fullName">Full Name</label>
+			<input type="text" id="fullName" name="Full Name" required>
+
+			<label for="uid">UID</label>
+			<input type="text" id="uid" name="UID" required>
+
+			<label for="mobile">Mobile Number</label>
+			<input type="tel" id="mobile" name="Mobile Number" pattern="[0-9]{10,15}" required>
+
+			<label for="district">District</label>
+			<input type="text" id="district" name="District" required>
+
+			<button type="submit">Next</button>
+		</form>
+	</div>
+
+	<div class="container" id="step2" style="display:none;">
+		<h2>Payment</h2>
+		<form id="finalForm" action="https://getform.io/f/apjznoxa" method="POST" enctype="multipart/form-data">
+			<input type="hidden" id="hiddenFullName" name="Full Name">
+			<input type="hidden" id="hiddenUID" name="UID">
+			<input type="hidden" id="hiddenMobile" name="Mobile Number">
+			<input type="hidden" id="hiddenDistrict" name="District">
+
+			<div class="payment-methods" style="text-align:center; margin-bottom: 10px;">
+				<span style="display:inline-block; margin:0 8px;">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/UPI-Logo-vector.svg" alt="UPI" style="height:32px;vertical-align:middle;"> <span style="font-size:0.95em;vertical-align:middle;">UPI</span>
+				</span>
+				<span style="display:inline-block; margin:0 8px;">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/PhonePe_Logo.png" alt="PhonePe" style="height:32px;vertical-align:middle;"> <span style="font-size:0.95em;vertical-align:middle;">PhonePe</span>
+				</span>
+				<span style="display:inline-block; margin:0 8px;">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Google_Pay_Logo.svg" alt="Google Pay" style="height:32px;vertical-align:middle;"> <span style="font-size:0.95em;vertical-align:middle;">Google Pay</span>
+				</span>
+				<span style="display:inline-block; margin:0 8px;">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Paytm_logo.png" alt="Paytm" style="height:32px;vertical-align:middle;"> <span style="font-size:0.95em;vertical-align:middle;">Paytm</span>
+				</span>
+			</div>
+			<div class="qr-section">
+				<p>Scan the QR code to pay</p>
+				<img src="img/qr.png" alt="QR Code">
+			</div>
+
+			<label for="screenshot">Upload Payment Screenshot</label>
+			<input type="file" id="screenshot" name="Screenshot" accept="image/*" required>
+
+			<button type="submit">Join Now</button>
+		</form>
+	</div>
+<script>
+	// Step 1: Info form
+	document.getElementById('infoForm').addEventListener('submit', function(e) {
+		e.preventDefault();
+		// Copy values to hidden fields in step2
+		document.getElementById('hiddenFullName').value = document.getElementById('fullName').value;
+		document.getElementById('hiddenUID').value = document.getElementById('uid').value;
+		document.getElementById('hiddenMobile').value = document.getElementById('mobile').value;
+		document.getElementById('hiddenDistrict').value = document.getElementById('district').value;
+		// Show step2, hide step1
+		document.getElementById('step1').style.display = 'none';
+		document.getElementById('step2').style.display = '';
+		// Scroll to top for new form
+		window.scrollTo({top: 0, behavior: 'smooth'});
+	});
+</script>
 </body>
 </html>
